@@ -1,11 +1,10 @@
 name: Weather Alert for In Buri
 
 on:
-  workflow_dispatch: # เพิ่มปุ่มให้สามารถรันเองได้บนหน้า Actions ของ GitHub
+  workflow_dispatch:
   schedule:
-    # ทำงานทุกวัน เวลา 07:00 และ 16:00 ตามเวลาประเทศไทย
-    # (00:00 และ 09:00 UTC)
-    - cron: '0 */3 * * *'
+    # แก้ไขบรรทัดนี้เพื่อรันทุกๆ 30 นาที
+    - cron: '*/30 * * * *'
 
 jobs:
   build:
